@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "traceloop-repro"
+version = "0.1.0"
+description = ""
+authors = ["Adrien <adrien@genei.io>"]
+packages = [{ include = "app" }]
+readme = "README.md"
+
+[tool.poetry.scripts]
+serve = "serve:serve"
+main = "app.server:main"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+uvicorn = "^0.30.1"
+fastapi = "^0.111.0"
+openai = "^1.35.7"
+traceloop-sdk = "^0.23.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
